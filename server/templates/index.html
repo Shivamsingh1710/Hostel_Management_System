@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>University Dashboard</h1>
+
+    <div id="search">
+              <select id="table-selector">
+                <option value="">Table Name:</option>
+                <option value="student">Student</option>
+                <option value="book">Book</option>
+                <option value="course">Course</option>
+                <option value="faculty">Faculty</option>
+                <option value="menu">Menu</option>
+                <option value="mess">Mess</option>
+                <option value="hostel">Hostel</option>
+                <option value="maintenance">Maintenance</option>
+                <option value="borrow">Borrow</option>
+                <option value="enrollment">Enrollment</option>
+            </select>
+      <label for="primary-key-input">Primary Key:</label>
+      <input type="text" id="primary-key-input" placeholder="Enter primary key">
+      <button id="search-btn">Search Record</button>
+    <div id="record-output"></div>
+
+    </div>
+
+    <br>
+    <br>
+    <select id="data-selector">
+        <option value="">Select Data</option>
+        <option value="student">Student</option>
+        <option value="book">Book</option>
+        <option value="course">Course</option>
+        <option value="faculty">Faculty</option>
+        <option value="menu">Menu</option>
+        <option value="mess">Mess</option>
+        <option value="hostel">Hostel</option>
+        <option value="maintenance">Maintenance</option>
+        <option value="borrow">Borrow</option>
+        <option value="enrollment">Enrollment</option>
+    </select>
+
+    
+
+
+    <table id="data-table">
+        <thead>
+            <tr>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <button id="add-data-button" style="display:none;">Add Data</button>
+
+    <div id="add-data-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="add-data-form">
+            <button type="button" id="submit">Submit</button>
+            <input type="submit" id="submit-button" value="Submit Data">
+          </form>
+        </div>
+      </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
